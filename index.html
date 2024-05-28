@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginPage" class="page active">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label>Username:</label>
+            <input type="text" id="loginUsername" required>
+            <label>Password:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+        </form>
+    </div>
+
+    <div id="registerPage" class="page">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label>Username:</label>
+            <input type="text" id="registerUsername" required>
+            <label>Password:</label>
+            <input type="password" id="registerPassword" required>
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </form>
+    </div>
+
+    <div id="homePage" class="page">
+        <h2>Tournaments</h2>
+        <div id="tournamentList"></div>
+    </div>
+
+    <div id="paymentsPage" class="page">
+        <h2>Payments</h2>
+        <div id="paymentList"></div>
+    </div>
+
+    <div id="adminPopup" class="popup hidden">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+            <label>Password:</label>
+            <input type="password" id="adminPassword" required>
+            <button type="submit">Enter</button>
+            <button type="button" onclick="closePopup()">Cancel</button>
+        </form>
+    </div>
+
+    <div id="adminPanel" class="page">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#" onclick="showUserData()">User Data</a></li>
+            <li><a href="#" onclick="showNewTournamentForm()">New Tournament</a></li>
+            <li><a href="#" onclick="showDeleteTournamentForm()">Delete Tournament</a></li>
+            <li><a href="#" onclick="showPayments()">Payments</a></li>
+            <li><a href="#" onclick="showBlockUserForm()">Block User</a></li>
+            <li><a href="#" onclick="showChangePasswordForm()">Change Password</a></li>
+            <li><a href="#" onclick="showUpdateRoomIDForm()">Update Room ID and Password</a></li>
+            <li><a href="#" onclick="showUsersJoined()">Users Joined</a></li>
+        </ul>
+        <div id="adminContent"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
